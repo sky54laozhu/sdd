@@ -126,6 +126,8 @@ SDD 将开发流程从：
 模糊想法 → 结构化 Spec → 审核 → 代码生成 → 验证 (与 Spec 一致性检查)
 ```
 
+![SDD 前后对比](../assets/img/01-before-after-flow.svg)
+
 关键的区别在于 "审核" 这一步。**Spec 是可被审核的 (reviewable)，而 "脑中的想法" 是不可被审核的。** 当你把想法写成 specification，团队成员 (包括未来的你自己) 才能真正 review 它。
 
 ---

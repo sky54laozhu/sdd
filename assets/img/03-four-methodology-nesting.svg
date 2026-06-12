@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" font-family="-apple-system, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif" font-size="13" role="img" aria-labelledby="t03 d03">
+  <title id="t03">SDD / DDD / BDD / TDD 四层方法论嵌套关系</title>
+  <desc id="d03">以同心矩形展示四种方法论的嵌套关系：最外层 SDD（"我们在构建什么？"）包含 DDD（"领域如何建模？"），DDD 包含 BDD（"期望什么行为？"），BDD 包含 TDD（"这个单元正确吗？"）。SDD 定义契约，DDD 设计结构，BDD 桥接业务和技术，TDD 验证实现。</desc>
+  <style>
+    .q { fill: #1a1a1a; font-weight: 600; font-size: 14px; }
+    .role { fill: #5a5a5a; font-size: 12px; }
+    .tag { fill: #fff; font-weight: 700; font-size: 15px; }
+  </style>
+
+  <!-- SDD outermost -->
+  <rect x="20" y="20" width="560" height="560" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="30" y="30" width="120" height="30" rx="6" fill="#2563eb"/>
+  <text x="90" y="50" class="tag" text-anchor="middle">SDD</text>
+  <text x="300" y="65" class="q" text-anchor="middle">"What are we building?"</text>
+  <text x="300" y="82" class="role" text-anchor="middle">定义契约 (contracts)</text>
+
+  <!-- DDD -->
+  <rect x="60" y="100" width="480" height="440" rx="12" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+  <rect x="70" y="110" width="120" height="30" rx="6" fill="#a16207"/>
+  <text x="130" y="130" class="tag" text-anchor="middle">DDD</text>
+  <text x="300" y="148" class="q" text-anchor="middle">"How is the domain modeled?"</text>
+  <text x="300" y="165" class="role" text-anchor="middle">设计结构 (structure)</text>
+
+  <!-- BDD -->
+  <rect x="100" y="185" width="400" height="320" rx="12" fill="#d1fae5" stroke="#047857" stroke-width="2"/>
+  <rect x="110" y="195" width="120" height="30" rx="6" fill="#047857"/>
+  <text x="170" y="215" class="tag" text-anchor="middle">BDD</text>
+  <text x="300" y="235" class="q" text-anchor="middle">"What behavior is expected?"</text>
+  <text x="300" y="252" class="role" text-anchor="middle">桥接业务和技术 (bridge)</text>
+
+  <!-- TDD innermost -->
+  <rect x="140" y="270" width="320" height="200" rx="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <rect x="150" y="280" width="120" height="30" rx="6" fill="#b91c1c"/>
+  <text x="210" y="300" class="tag" text-anchor="middle">TDD</text>
+  <text x="300" y="340" class="q" text-anchor="middle">"Is this unit correct?"</text>
+  <text x="300" y="357" class="role" text-anchor="middle">验证实现 (verify)</text>
+
+  <!-- TDD cycle inside -->
+  <text x="300" y="400" text-anchor="middle" fill="#b91c1c" font-size="12" font-weight="600">RED → GREEN → REFACTOR</text>
+  <text x="300" y="420" text-anchor="middle" fill="#5a5a5a" font-size="11">写测试 → 通过测试 → 重构</text>
+
+  <!-- Bottom annotation -->
+  <text x="300" y="555" text-anchor="middle" fill="#5a5a5a" font-size="11">SDD 不是与 TDD/BDD/DDD 并列的方法——它是包裹在外面的 outer loop</text>
+</svg>

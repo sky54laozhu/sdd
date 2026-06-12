@@ -42,6 +42,8 @@
 └────────────┴────────────┴──────────┴──────────┴─────────┘
 ```
 
+![5 种多代理编排模式总览](../assets/img/12-five-patterns-overview.svg)
+
 ---
 
 ## Pattern 1: Verifier Agent (验证代理模式)

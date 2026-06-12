@@ -57,6 +57,8 @@ Step 6: 手动验证代码与 spec 的一致性
 Step 7: (理想情况) 更新 spec 以反映任何 deviation
 ```
 
+![Spec-First 工作流 7 步](../assets/img/04-spec-first-workflow.svg)
+
 ### 实际示例
 
 一个典型的 Spec-First 场景 — 你要为 notification service 添加一个 webhook delivery 功能：

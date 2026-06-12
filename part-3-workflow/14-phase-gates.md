@@ -105,6 +105,8 @@ Report: PASS or FAIL with specific issues."
 └──────────┘             └──────────────┘
 ```
 
+![Hybrid Gate 流程](../assets/img/14-hybrid-gate-flow.svg)
+
 **适用场景**：大多数实际项目。自动化负责"能用规则判断的事"，人类负责"需要判断力的事"。
 
 ---

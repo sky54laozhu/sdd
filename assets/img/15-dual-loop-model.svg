@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" font-family="-apple-system, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif" font-size="13" role="img" aria-labelledby="t15 d15">
+  <title id="t15">SDD + TDD 双循环模型</title>
+  <desc id="d15">外循环 SDD（项目级别）：Constitution→Specify→Plan→Tasks→Implement。内循环 TDD（任务级别）：在 Implement 阶段内，每个 Task 执行 RED（从 Spec 写测试）→ GREEN（最小化通过）→ REFACTOR（清理代码）→ Next Task。</desc>
+  <style>
+    .label { fill: #1a1a1a; font-weight: 600; text-anchor: middle; }
+    .sub { fill: #5a5a5a; font-size: 11px; text-anchor: middle; }
+    .tag { fill: #fff; font-weight: 700; font-size: 12px; text-anchor: middle; }
+    .arrow { stroke: #1a2233; stroke-width: 1.5; fill: none; }
+  </style>
+  <defs>
+    <marker id="a15" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a2233"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="360" fill="#fafbfc" stroke="#1a2233" stroke-width="2" rx="4"/>
+  <text x="440" y="28" text-anchor="middle" fill="#1a2233" font-size="16" font-weight="600">SDD + TDD 双循环模型</text>
+
+  <!-- Outer Loop: SDD -->
+  <rect x="30" y="48" width="820" height="280" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+  <rect x="40" y="40" width="280" height="24" rx="4" fill="#2563eb"/>
+  <text x="180" y="56" class="tag">SDD Outer Loop（项目级别）</text>
+
+  <!-- SDD phases -->
+  <rect x="55" y="78" width="100" height="35" rx="6" fill="#fff" stroke="#2563eb"/>
+  <text x="105" y="100" class="label" font-size="11">Constitution</text>
+  <line x1="155" y1="95" x2="175" y2="95" class="arrow" marker-end="url(#a15)"/>
+
+  <rect x="175" y="78" width="80" height="35" rx="6" fill="#fff" stroke="#2563eb"/>
+  <text x="215" y="100" class="label" font-size="11">Specify</text>
+  <line x1="255" y1="95" x2="275" y2="95" class="arrow" marker-end="url(#a15)"/>
+
+  <rect x="275" y="78" width="65" height="35" rx="6" fill="#fff" stroke="#2563eb"/>
+  <text x="308" y="100" class="label" font-size="11">Plan</text>
+  <line x1="340" y1="95" x2="360" y2="95" class="arrow" marker-end="url(#a15)"/>
+
+  <rect x="360" y="78" width="65" height="35" rx="6" fill="#fff" stroke="#2563eb"/>
+  <text x="393" y="100" class="label" font-size="11">Tasks</text>
+  <line x1="425" y1="95" x2="445" y2="95" class="arrow" marker-end="url(#a15)"/>
+
+  <text x="475" y="100" class="label" font-size="11" fill="#2563eb">[Implement]</text>
+
+  <!-- Arrow down to inner loop -->
+  <line x1="475" y1="108" x2="475" y2="138" class="arrow" marker-end="url(#a15)"/>
+
+  <!-- Inner Loop: TDD -->
+  <rect x="80" y="138" width="700" height="170" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <rect x="90" y="130" width="280" height="24" rx="4" fill="#b91c1c"/>
+  <text x="230" y="146" class="tag">TDD Inner Loop（任务级别）</text>
+
+  <text x="440" y="172" class="sub">For each task:</text>
+
+  <!-- RED -->
+  <rect x="180" y="190" width="130" height="55" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="245" y="214" class="label" fill="#b91c1c">RED</text>
+  <text x="245" y="232" class="sub">Write test (from spec)</text>
+
+  <line x1="310" y1="218" x2="350" y2="218" class="arrow" marker-end="url(#a15)"/>
+
+  <!-- GREEN -->
+  <rect x="350" y="190" width="130" height="55" rx="8" fill="#d1fae5" stroke="#047857" stroke-width="2"/>
+  <text x="415" y="214" class="label" fill="#047857">GREEN</text>
+  <text x="415" y="232" class="sub">Pass test (minimal)</text>
+
+  <line x1="480" y1="218" x2="520" y2="218" class="arrow" marker-end="url(#a15)"/>
+
+  <!-- REFACTOR -->
+  <rect x="520" y="190" width="130" height="55" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="585" y="214" class="label" fill="#2563eb">REFACTOR</text>
+  <text x="585" y="232" class="sub">Improve (clean up)</text>
+
+  <line x1="650" y1="218" x2="690" y2="218" class="arrow" marker-end="url(#a15)"/>
+
+  <text x="720" y="218" class="label" font-size="11">→ Next Task</text>
+
+  <!-- Annotations -->
+  <text x="440" y="270" text-anchor="middle" class="sub" fill="#b91c1c">测试从 Spec 的 Acceptance Criteria 派生，不是从实现推导</text>
+
+  <!-- Bottom note -->
+  <text x="440" y="345" text-anchor="middle" class="sub">外循环回答：做什么？为什么？按什么顺序？ · 内循环回答：这个 task 的代码正确吗？</text>
+</svg>

@@ -29,6 +29,8 @@ Claude Code 拥有约 200K token 的 context window。这听起来很大，但�
 └─────────────────────────────────────────────────┘
 ```
 
+![Context Window Token 预算](../assets/img/27-token-budget.svg)
+
 当你进入 context window 的最后 20% 时（大约 160K 以上），你会观察到：
 
 - Agent 开始"忘记"早期对话中的细节

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 280" font-family="-apple-system, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif" font-size="13" role="img" aria-labelledby="t14 d14">
+  <title id="t14">Hybrid Gate 流程：自动检查 + 人工审批</title>
+  <desc id="d14">混合审核流程：Auto Check（格式检查）通过后进入 Human Review（判断力审查），通过则进入 Next Phase。Auto Check 失败则 Fix Issues，Human Review 拒绝则 Revise Artifact。</desc>
+  <style>
+    .label { fill: #1a1a1a; font-weight: 600; text-anchor: middle; }
+    .sub { fill: #5a5a5a; font-size: 11px; text-anchor: middle; }
+    .pass { fill: #0a7c2e; font-weight: 600; font-size: 11px; text-anchor: middle; }
+    .fail { fill: #b71c1c; font-weight: 600; font-size: 11px; text-anchor: middle; }
+    .arrow { stroke: #1a2233; stroke-width: 2; fill: none; }
+    .arrow-pass { stroke: #0a7c2e; stroke-width: 2; fill: none; }
+    .arrow-fail { stroke: #b71c1c; stroke-width: 1.5; fill: none; }
+  </style>
+  <defs>
+    <marker id="a14" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a2233"/>
+    </marker>
+    <marker id="a14g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0a7c2e"/>
+    </marker>
+    <marker id="a14r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b71c1c"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="280" fill="#fafbfc" stroke="#1a2233" stroke-width="2" rx="4"/>
+  <text x="440" y="28" text-anchor="middle" fill="#1a2233" font-size="16" font-weight="600">Hybrid Gate 流程（自动化 + 人工审批）</text>
+
+  <!-- Auto Check -->
+  <rect x="60" y="60" width="180" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="90" class="label">Auto Check</text>
+  <text x="150" y="110" class="sub">(format / lint / schema)</text>
+
+  <!-- PASS arrow -->
+  <line x1="240" y1="95" x2="340" y2="95" class="arrow-pass" marker-end="url(#a14g)"/>
+  <text x="290" y="86" class="pass">PASS</text>
+
+  <!-- Human Review -->
+  <rect x="340" y="60" width="200" height="70" rx="8" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+  <text x="440" y="90" class="label">Human Review</text>
+  <text x="440" y="110" class="sub">(judgment / architecture)</text>
+
+  <!-- APPROVE arrow -->
+  <line x1="540" y1="95" x2="640" y2="95" class="arrow-pass" marker-end="url(#a14g)"/>
+  <text x="590" y="86" class="pass">APPROVE</text>
+
+  <!-- Next Phase -->
+  <rect x="640" y="60" width="160" height="70" rx="8" fill="#d1fae5" stroke="#047857" stroke-width="2"/>
+  <text x="720" y="90" class="label">Next Phase</text>
+  <text x="720" y="110" class="sub">进入下一阶段</text>
+
+  <!-- FAIL path -->
+  <line x1="150" y1="130" x2="150" y2="190" class="arrow-fail" marker-end="url(#a14r)"/>
+  <text x="115" y="168" class="fail">FAIL</text>
+  <rect x="70" y="190" width="160" height="50" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="150" y="218" class="label" fill="#b91c1c">Fix Issues</text>
+
+  <!-- REJECT path -->
+  <line x1="440" y1="130" x2="440" y2="190" class="arrow-fail" marker-end="url(#a14r)"/>
+  <text x="400" y="168" class="fail">REJECT</text>
+  <rect x="350" y="190" width="180" height="50" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="440" y="218" class="label" fill="#b91c1c">Revise Artifact</text>
+
+  <!-- Note -->
+  <text x="440" y="268" text-anchor="middle" class="sub">自动化负责"能用规则判断的事" · 人类负责"需要判断力的事"</text>
+</svg>

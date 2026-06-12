@@ -50,6 +50,8 @@ Plan output ──────▶ Tasks input
 Tasks output ─────▶ Implement input
 ```
 
+![SDD 五阶段流程全景图](../assets/img/13-five-phase-flow.svg)
+
 注意 Constitution 的箭头指向所有后续阶段——它不仅仅是 Specify 的前置条件，而是贯穿全流程的**不变量（invariant）**。
 
 ---

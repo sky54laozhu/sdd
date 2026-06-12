@@ -624,6 +624,8 @@ Over-Spec (#4) ◀─────▶ Under-Spec (#5)
 Template Worship (#10) ──▶ Cargo-Cult (#7)
 ```
 
+![10 个陷阱的关系图](../assets/img/17-pitfall-relation-map.svg)
+
 **两条主要链路：**
 1. **膨胀链**：Bloat → Context Exhaustion → Adherence Problems → Gate Fatigue → Cargo-Cult
 2. **精度链**：Over/Under-Spec → Contradictions → Drift

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" font-family="-apple-system, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif" font-size="13" role="img" aria-labelledby="t10 d10">
+  <title id="t10">Claude Code Hook 三类型生命周期</title>
+  <desc id="d10">展示 Claude Code 的三种 Hook 类型：PreToolUse（执行前拦截，可 REJECT）→ Tool Execution → PostToolUse（执行后善后，可 AUTO-FIX）。Session 结束时触发 Stop Hook（最终验证，如 build check）。</desc>
+  <style>
+    .label { fill: #1a1a1a; font-weight: 500; text-anchor: middle; }
+    .sub { fill: #5a5a5a; font-size: 11px; text-anchor: middle; }
+    .tag { fill: #fff; font-weight: 600; font-size: 12px; text-anchor: middle; }
+    .arrow { stroke: #1a2233; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a10" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a2233"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="320" fill="#fafbfc" stroke="#1a2233" stroke-width="2" rx="4"/>
+  <text x="440" y="28" text-anchor="middle" fill="#1a2233" font-size="16" font-weight="600">Hook 三类型生命周期</text>
+
+  <!-- Tool Use flow -->
+  <rect x="30" y="38" width="140" height="20" rx="4" fill="#2563eb"/>
+  <text x="100" y="52" class="tag" font-size="11">Tool Use 流程</text>
+
+  <!-- PreToolUse -->
+  <rect x="60" y="75" width="180" height="70" rx="8" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+  <text x="150" y="100" class="label" font-weight="700">PreToolUse</text>
+  <text x="150" y="118" class="sub">执行前拦截 · 验证</text>
+  <text x="150" y="134" class="sub" fill="#b71c1c">可 REJECT 阻止执行</text>
+
+  <line x1="240" y1="110" x2="300" y2="110" class="arrow" marker-end="url(#a10)"/>
+
+  <!-- Tool Exec -->
+  <rect x="300" y="75" width="180" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="390" y="100" class="label" font-weight="700">Tool Execution</text>
+  <text x="390" y="118" class="sub">实际执行工具</text>
+  <text x="390" y="134" class="sub">(Write / Edit / Bash ...)</text>
+
+  <line x1="480" y1="110" x2="540" y2="110" class="arrow" marker-end="url(#a10)"/>
+
+  <!-- PostToolUse -->
+  <rect x="540" y="75" width="180" height="70" rx="8" fill="#d1fae5" stroke="#047857" stroke-width="2"/>
+  <text x="630" y="100" class="label" font-weight="700">PostToolUse</text>
+  <text x="630" y="118" class="sub">执行后善后</text>
+  <text x="630" y="134" class="sub" fill="#0a7c2e">可 AUTO-FIX (lint/format)</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="175" x2="840" y2="175" stroke="#9ca3af" stroke-dasharray="4 3"/>
+  <rect x="30" y="167" width="140" height="20" rx="4" fill="#b91c1c"/>
+  <text x="100" y="181" class="tag" font-size="11">Session 结束</text>
+
+  <!-- Stop Hook -->
+  <rect x="300" y="200" width="280" height="70" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="440" y="228" class="label" font-weight="700">Stop Hook</text>
+  <text x="440" y="248" class="sub">最终验证 · Build check · Lint 全量检查</text>
+
+  <!-- Note -->
+  <text x="440" y="305" text-anchor="middle" class="sub">PreToolUse + PostToolUse 每次工具调用都触发 · Stop 只在 session 结束时触发一次</text>
+</svg>

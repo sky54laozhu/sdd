@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" font-family="-apple-system, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif" font-size="13" role="img" aria-labelledby="t04 d04">
+  <title id="t04">Spec-First 工作流 7 步</title>
+  <desc id="d04">Spec-First 层级的线性工作流：需求讨论→写 Spec 文档→团队 Review→喂给 AI Agent→AI 生成代码→手动验证一致性→更新 Spec 反映 Deviation。</desc>
+  <style>
+    .label { fill: #1a1a1a; font-weight: 500; text-anchor: middle; font-size: 11px; }
+    .num { fill: #fff; font-weight: 700; text-anchor: middle; font-size: 12px; }
+    .arrow { stroke: #1a2233; stroke-width: 1.5; fill: none; }
+  </style>
+  <defs>
+    <marker id="a04" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a2233"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="200" fill="#fafbfc" stroke="#1a2233" stroke-width="2" rx="4"/>
+  <text x="440" y="28" text-anchor="middle" fill="#1a2233" font-size="16" font-weight="600">Spec-First 工作流</text>
+  <text x="440" y="46" text-anchor="middle" fill="#5a5a5a" font-size="11">最低采纳成本：Spec 作为参考文档，人工维护一致性</text>
+
+  <!-- Step 1 -->
+  <circle cx="70" cy="100" r="16" fill="#1a2233"/>
+  <text x="70" y="105" class="num">1</text>
+  <text x="70" y="136" class="label">需求讨论</text>
+  <line x1="86" y1="100" x2="118" y2="100" class="arrow" marker-end="url(#a04)"/>
+
+  <!-- Step 2 -->
+  <circle cx="140" cy="100" r="16" fill="#2563eb"/>
+  <text x="140" y="105" class="num">2</text>
+  <text x="140" y="136" class="label">写 Spec</text>
+  <text x="140" y="150" class="label">文档</text>
+  <line x1="156" y1="100" x2="188" y2="100" class="arrow" marker-end="url(#a04)"/>
+
+  <!-- Step 3 -->
+  <circle cx="210" cy="100" r="16" fill="#a16207"/>
+  <text x="210" y="105" class="num">3</text>
+  <text x="210" y="136" class="label">团队</text>
+  <text x="210" y="150" class="label">Review</text>
+  <line x1="226" y1="100" x2="258" y2="100" class="arrow" marker-end="url(#a04)"/>
+
+  <!-- Step 4 -->
+  <circle cx="310" cy="100" r="16" fill="#4f97ff"/>
+  <text x="310" y="105" class="num">4</text>
+  <text x="310" y="136" class="label">Spec 作为</text>
+  <text x="310" y="150" class="label">Context 喂给 AI</text>
+  <line x1="326" y1="100" x2="400" y2="100" class="arrow" marker-end="url(#a04)"/>
+
+  <!-- Step 5 -->
+  <circle cx="430" cy="100" r="16" fill="#4f97ff"/>
+  <text x="430" y="105" class="num">5</text>
+  <text x="430" y="136" class="label">AI 生成代码</text>
+  <text x="430" y="150" class="label">人类 Review</text>
+  <line x1="446" y1="100" x2="518" y2="100" class="arrow" marker-end="url(#a04)"/>
+
+  <!-- Step 6 -->
+  <circle cx="550" cy="100" r="16" fill="#0a7c2e"/>
+  <text x="550" y="105" class="num">6</text>
+  <text x="550" y="136" class="label">手动验证</text>
+  <text x="550" y="150" class="label">Spec 一致性</text>
+  <line x1="566" y1="100" x2="638" y2="100" class="arrow" marker-end="url(#a04)"/>
+
+  <!-- Step 7 -->
+  <circle cx="670" cy="100" r="16" fill="#5a5a5a"/>
+  <text x="670" y="105" class="num">7</text>
+  <text x="670" y="136" class="label">更新 Spec</text>
+  <text x="670" y="150" class="label">反映 Deviation</text>
+
+  <!-- Legend -->
+  <text x="810" y="95" text-anchor="middle" fill="#5a5a5a" font-size="10" font-style="italic">理想情况</text>
+  <text x="810" y="110" text-anchor="middle" fill="#5a5a5a" font-size="10" font-style="italic">下执行</text>
+</svg>

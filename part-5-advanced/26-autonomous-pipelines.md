@@ -115,6 +115,8 @@ autonomous pipeline 的理想权限配置是：
 └─────────────────────────────────────────┘
 ```
 
+![自主循环模式 Simple Loop](../assets/img/26-simple-loop.svg)
+
 实现方式：
 
 ```markdown

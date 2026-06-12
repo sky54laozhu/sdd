@@ -162,6 +162,8 @@ SDD 不是在 TDD/BDD/DDD 的 "旁边" 加了一种新方法。它是 **包裹�
 └─────────────────────────────────────────┘
 ```
 
+![SDD / DDD / BDD / TDD 四层嵌套关系](../assets/img/03-four-methodology-nesting.svg)
+
 - **DDD** 设计结构 (structure)
 - **SDD** 定义契约 (contracts)
 - **BDD** 桥接业务和技术 (bridge)

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" font-family="-apple-system, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif" font-size="13" role="img" aria-labelledby="t11 d11">
+  <title id="t11">Skill vs Subagent：上下文共享 vs 隔离</title>
+  <desc id="d11">对比 Skill（在主会话同一上下文中执行，共享对话历史）和 Subagent（独立隔离上下文，看不到主会话历史，可并行执行）。两者都在 Main Claude Code Session 内运行。</desc>
+  <style>
+    .label { fill: #1a1a1a; font-weight: 500; text-anchor: middle; }
+    .sub { fill: #5a5a5a; font-size: 11px; }
+    .tag { fill: #fff; font-weight: 600; font-size: 12px; text-anchor: middle; }
+  </style>
+
+  <rect x="0" y="0" width="880" height="360" fill="#fafbfc" stroke="#1a2233" stroke-width="2" rx="4"/>
+  <text x="440" y="28" text-anchor="middle" fill="#1a2233" font-size="16" font-weight="600">Skill vs Subagent：上下文模型对比</text>
+
+  <!-- Outer container: Main Session -->
+  <rect x="30" y="50" width="820" height="280" rx="10" fill="#fff" stroke="#1a2233" stroke-width="2"/>
+  <rect x="40" y="42" width="260" height="24" rx="4" fill="#1a2233"/>
+  <text x="170" y="58" class="tag">Main Claude Code Session</text>
+
+  <!-- Skill (left, same context) -->
+  <rect x="60" y="85" width="360" height="220" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <rect x="70" y="77" width="200" height="24" rx="4" fill="#2563eb"/>
+  <text x="170" y="93" class="tag">Skill（SAME context）</text>
+
+  <text x="80" y="125" class="sub">&#x2713; 共享对话历史</text>
+  <text x="80" y="148" class="sub">&#x2713; 能看到之前所有上下文</text>
+  <text x="80" y="171" class="sub">&#x2713; 适合需要"记住"之前讨论的流程</text>
+  <text x="80" y="194" class="sub">&#x2713; 直接在当前会话中执行</text>
+
+  <rect x="80" y="215" width="320" height="70" rx="6" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="240" y="240" class="label" text-anchor="middle" fill="#2563eb" font-weight="600">适用场景</text>
+  <text x="240" y="260" class="sub" text-anchor="middle">SDD Workflow · 代码审查 · 需要上下文的流程</text>
+  <text x="240" y="276" class="sub" text-anchor="middle">TDD 循环 · 文档生成</text>
+
+  <!-- Subagents (right, isolated) -->
+  <rect x="450" y="85" width="180" height="220" rx="8" fill="#fef3c7" stroke="#a16207" stroke-width="1.5"/>
+  <rect x="460" y="77" width="140" height="24" rx="4" fill="#a16207"/>
+  <text x="530" y="93" class="tag" font-size="11">Subagent A (ISOLATED)</text>
+
+  <text x="465" y="125" class="sub">✕ 独立上下文</text>
+  <text x="465" y="148" class="sub">✕ 看不到主会话</text>
+  <text x="465" y="171" class="sub">&#x2713; 全新开始</text>
+
+  <rect x="660" y="85" width="170" height="220" rx="8" fill="#fef3c7" stroke="#a16207" stroke-width="1.5"/>
+  <rect x="670" y="77" width="140" height="24" rx="4" fill="#a16207"/>
+  <text x="740" y="93" class="tag" font-size="11">Subagent B (ISOLATED)</text>
+
+  <text x="675" y="125" class="sub">✕ 独立上下文</text>
+  <text x="675" y="148" class="sub">&#x2713; 可并行执行</text>
+  <text x="675" y="171" class="sub">&#x2713; 全新开始</text>
+
+  <!-- Note -->
+  <text x="440" y="348" text-anchor="middle" class="sub">Skill = 扩展主会话能力 · Subagent = 隔离执行独立任务</text>
+</svg>
