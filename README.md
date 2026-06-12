@@ -124,6 +124,7 @@
 | [术语表](appendix/glossary.md) | SDD 中英双语术语表 (50+ 术语) |
 | [EARS 速查卡](appendix/ears-cheatsheet.md) | EARS 记法快速参考 |
 | [工具对比矩阵](appendix/tool-comparison-matrix.md) | 6 款 SDD 工具详细对比 |
+| [Karpathy Guidelines](appendix/karpathy-guidelines.md) | LLM 编码行为四大原则与 SDD 映射 |
 | [推荐资源](appendix/further-reading.md) | 文档、论文、教程、视频、仓库 |
 
 ### 实战项目 (Project)

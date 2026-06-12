@@ -42,6 +42,7 @@
 | [Hillel Wayne - Formal Methods for Programmers](https://www.hillelwayne.com/post/formally-specifying/) | 面向实践者的形式化方法入门 |
 | [Kiro Launch Blog - Spec-Driven Development](https://kiro.dev/blog/spec-driven-development) | AWS Kiro 团队对 SDD 理念的阐述 |
 | [Simon Willison - AI-Assisted Development](https://simonwillison.net/tags/ai-assisted-programming/) | 持续追踪 AI 辅助编程的实践和反思 |
+| [Andrej Karpathy - LLM Coding Pitfalls](https://x.com/karpathy/status/2015883857489522876) | Karpathy 总结的 LLM 编码系统性缺陷，本教程 Karpathy Guidelines 附录的来源 |
 
 ---
 
@@ -83,6 +84,7 @@
 | [cursor-community/awesome-cursor](https://github.com/cursor-community/awesome-cursor) | — | Cursor IDE 社区资源集合 |
 | [all-hands-ai/OpenHands](https://github.com/All-Hands-AI/OpenHands) | 40K+ | 开源 AI 软件工程 Agent |
 | [princeton-nlp/SWE-agent](https://github.com/princeton-nlp/SWE-agent) | 15K+ | 自主解决 GitHub Issue 的 Agent 框架 |
+| [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | — | Karpathy LLM 编码准则的 Claude Code Plugin 实现 |
 
 ---
 
